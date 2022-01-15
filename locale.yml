@@ -1,0 +1,191 @@
+###########################################################################################
+# This is a YML file. Be careful when editing. Check your edits in a YAML checker like    #
+# the one at http://yaml-online-parser.appspot.com                                        #
+# If this file is deleted, then it will be recreate at the next reload.                   #
+###########################################################################################
+general:
+   notavailable: "Districts are not available in this world"
+   districts: "Districts"
+   owner: "Owner"
+   renter: "Renter"
+   controlpaneltitle: "District Control"
+   infopaneltitle: "District Info"
+
+help:
+   help: "help"
+   create: "Tries to make a district"
+   remove: "Removes a district that you are standing in if you are the owner"
+   info: "Shows info on the district you and general info"
+   trust: "Gives player full access to your district"
+   untrust: "Revokes trust to your district"
+   untrustall: "Removes all trusted parties from your district"
+   buy: "Attempts to buy the district you are in"
+   rent: "Attempts to rent the district you are in"
+   rentprice: "Puts the district you are in up for rent for a weekly rent"
+   sell: "Puts the district you are in up for sale"
+   cancel: "Cancels a For Sale, For Rent or a Lease"
+
+################
+#General Errors#
+################
+error:
+   #"Error: Invalid Player (check spelling)"
+   unknownPlayer: "That player is unknown."
+   noPermission: "You don't have permission to use that command!"
+   commandNotReady: "You can't use that command right now."
+   offlinePlayer: "That player is offline or doesn't exist."
+   unknownCommand: "Unknown command."
+   districtProtected: "District protected"
+   move: "Move to a district you own or rent first."
+   notowner: "You must be the owner or renter of this district to do that."
+   removing: "Removing district!"
+   notyours: "This is not your district!"
+   notinside: "You are not in a district!"
+   tooexpensive: "You cannot afford [price]" 
+   alreadyexists: "District already exists!"
+   noPVP: "Target is in a no-PVP district!"
+   ingamecommand: "This command only available in-game"
+
+### Commands
+trust:
+   trust: "[player] trusts you in a district."
+   untrust: "[player] untrusted you in a district."
+   title: "[District Trusted Players]"
+   owners: "[Owner's]"
+   renters: "[Renter's]"
+   none: "None"
+   notrust: "No one is trusted in this district."
+   alreadytrusted: "That player is already trusted."
+
+sell:
+   notforsale: "This district is not for sale!"
+   youareowner: "You already own this district!" 
+   sold: "You successfully sold a district for [price] to [player]"
+   bought: "You purchased the district for [price]!"
+   ecoproblem: "There was an economy problem trying to purchase the district for [price]!"
+   beingrented: "The district is being rented at this time. Wait until the lease expires."
+   invalidprice: "The price is invalid (must be >= [price])"
+   forsale: "Putting district up for sale for [price]"
+   ad: "This district is for sale for [price]!"
+
+rent:
+   notforrent: "This district is not for rent!"
+   alreadyrenting: "You are already renting this district!"
+   alreadyleased: "This district is already being leased."
+   tip: "To end the renter's lease at the next due date, use the cancel command."
+   leased: "You successfully leased a district for [price] to [player]"
+   rented: "You rented the district for [price] for 1 week!"
+   error: "There was an economy problem trying to rent the district for [price]!"
+   invalidrent: "The rent is invalid (must be >= [price])"
+   forrent: "Putting district up for rent for [price]"
+   ad: "This district is for rent for [price] per week."
+
+messages:
+   enter: "Entering [owner]'s district!"
+   leave: "Now leaving [owner]'s district."
+   rententer: "Entering [player]'s rented district!"
+   rentfarewell: "Now leaving [player]'s rented district."
+   youarein: "You are now in [owner]'s district!"
+   removed: "This district is no more..."
+   removedmessage: "A district of yours is no more!"
+cancel:
+   cancelled: "District is no longer for sale or rent."
+   leasestatus1: "District is currently leased by [player]."
+   leasestatus2: "Lease will not renew and will terminate in [time] days."
+   leasestatus3: "You can put it up for rent again after that date."
+   cancelmessage: "[owner] ended a lease you have on a district. It will end in [time] days."
+   leaserenewalcancelled: "Lease renewal cancelled. Lease term finishes in [time] days."
+   renewalcancelmessage: "[renter] canceled a lease with you. It will end in [time] days."
+info:
+   info: "[District Info]"
+   ownerstrusted: "[Owner's trusted players]"
+   none: "None"
+   nextrent: "Next rent of [price] due in [time] days."
+   leasewillend: "Lease will end in [time] days!"
+   renter: "Renter: [nickname] ([name])"
+   renterstrusted: "[Renter's trusted players]"
+   ad: "This district can be leased for [price]"
+   move: "Move to a district to see its info"
+
+lease:
+   rentpaid: "You paid a rent of [price] to [owner]."
+   rentpaidowner: "[player] paid you a rent of [price]."
+   cannotpay: "You could not pay a rent of [price] so you were evicted from [owner]'s district"
+   cannotpayowner: "[player] could not pay rent of [price] so was evicted"
+   leaseended: "The lease on a district you were renting from [owner] ended."
+   leaseendedowner: "[player]'s lease ended."
+
+conversations:
+   enterrent: "Enter the rent amount"
+   enterprice: "Enter the district price"
+   enteramount: "Enter the amount"
+   mustbemore: "Amount must be more than [price]"
+   howmuch: "How much?"
+   enterblocknum: "Enter the number of blocks to buy ([price] each)"
+   enterradius: "Enter the radius to claim"
+   enterblocks: "Enter the number of blocks"
+   ended: "Ended"
+   move: "Move out of a district to claim an area"
+   howmany: "How many?"
+   youbought: "You bought [number] blocks for [cost]"
+   blockscost: "Blocks cost [cost]"
+   youhave: "You have [balance]"
+   notenoughblocks: "You do not have enough blocks!"
+   blocksavailable: "Blocks available: [number]"
+   blocksrequired: "Blocks required: [number]"
+   minimumradius: "The minimum radius is 2 blocks"
+   districtcreated: "District created!"
+   younowhave: "You now have [number] blocks left."
+   overlap: "That size would overlaps another district"
+   entername: "Enter the name of this district, 'none' or 'default' to use the default"
+   settingownerdefault: "Setting to the default owner's message"
+   settingrenterdefault: "Setting to the default renter's message"
+   nomessage: "No message will be shown when entering or leaving."
+   settingto: "Setting to: [name]"
+   #Color codes okay with these two messages
+   entermessage: "&6Entering '&f[name]&6'"
+   leavingmessage: "&6Leaving '&f[name]&6'"
+
+# Control panels
+cp:
+   allowed: "Allowed by anyone"
+   disallowed: "Disallowed for outsiders"
+   clicktobuy: "Click to buy"
+   clicktotoggle: "Click to toggle"
+   clicktoenter: "Click to enter text"
+   clocktoenteramount: "Click to enter amount"
+   clicktocancel: "Click to cancel"
+   visible: "Visible"
+   invisible: "Invisible"
+
+
+
+##################################
+#Admin commands that use /dadmin #
+##################################
+
+#Help
+adminHelp:
+   reload: "reload configuration from file."
+   balance: "show how many blocks player has."
+   info: "display information for the given player."
+   info2: "provides info on the district you are in."
+   give: "give player some blocks."
+   take: "take blocks from player."
+   set: "set blocks player has."
+   evict: "removes renter from this district."
+
+#reload
+reload:
+   configReloaded: "Configuration reloaded from file."
+
+#delete
+delete:
+   removing: "District removed."
+
+news:
+   headline: "[District News]"
+
+events:
+   evicted: "Renter evicted"
+

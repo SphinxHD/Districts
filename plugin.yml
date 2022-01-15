@@ -1,0 +1,36 @@
+name: Districts
+main: com.wasteofplastic.districts.Districts
+version: ${version}
+api-version: 1.17
+description: Districts
+author: Tastybento, Sphinx_HD
+depend: [ Vault ]
+softdepend: [ WorldGuard, PlaceholderAPI ]
+commands:
+    district:
+        description: Main player command
+        aliases: [dist, d]
+        usage:  |
+             /district help
+    dadmin:
+        description: Admin commands
+        usage:  |
+            /dadmin
+permissions:    
+  districts.player:
+     description: Gives access to basic player commands
+     default: true
+  districts.trustplayer:
+     description: Basic commands plus player trusting
+     default: false
+  districts.advancedplayer:
+     description: Gives access to advanced player commands (buy, sell, rent)
+     default: false  
+  districts.buyblocks:
+     description: Enable block purchasing
+     default: false   
+  districts.admin:
+     description: Gives access to admin commands
+     default: op
+
+

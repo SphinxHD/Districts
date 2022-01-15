@@ -1,0 +1,124 @@
+districts:
+   # World Names where Districts will operate, list them
+   # If this is blank or missing, Districts will operate in all worlds
+   # Note: names must be correctly capitalized to be recognized
+   worldName:
+    - world
+    - creative
+
+   # Starting blocks - the number of blocks a player will get at the start
+   beginningblocks: 25
+   # Block price - how much a block can be bought for with /d buyblocks.
+   # Set it to zero to disable this function
+   # Player must have the districts.buyblocks permission to be able to buy blocks
+   blockprice: 0 
+
+   # Visulizations - on or off
+   showvisualization: true
+   # Visualization material
+   # Can be anything, but must be solid.
+   # Good ones - GLOWSTONE, DIAMOND_BLOCK, GOLD_BLOCK, etc.
+   # Default is REDSTONE_BLOCK
+   visualblock: REDSTONE_BLOCK
+
+   # Visualization range - how far away from the player will visualizations be drawn
+   # Do not make this too large otherwise weird things can happen. Minimum distance
+   # is 10.
+   visualrange: 20
+
+   # on is Actionbar, off is Chat
+   actionbar:
+      # Protection Messages in Actionbar or Chat.
+      protection: true
+      # Entering, Farrwell Messeges in Actionbar or Chat.
+      distmessage: true
+
+   # Who gets blocks and how many
+   # permission: <number of blocks>:<max>
+   # List permission and how many blocks they get every tick and the maximum
+   # number of free blocks they can hold at any one time. If you want this to be
+   # the maximum number of blocks they can claim in total plus free blocks then
+   # set maxlocks to true below. 
+   # The permission can be anything you like, but you have to add it to the
+   # players using a permissions plugin or other plugin.
+   blockgroups:
+     #Default permission
+     districts.player: 1:100
+     #Advanced permission
+     districts.advancedplayer: 2:200
+     #These are just examples - make your own or use them if you like
+     districts.vip: 3:300
+     districts.donor: 20:500
+     districts.superdonor: 100:1000
+
+   # How often to give out the blocks in minutes, if zero, blocks will never be given
+   # Players must be *online* to receive blocks, so a small number is okay.
+   # Blocks stop being given when the player maxes out.
+   blocktick: 1
+
+   # Maximum claim blocks
+   # The above allows players to build and claim indefinitely.
+   # If you would like to limit players to an absolute maximum number of blocks they
+   # can claim, set this to true and increase the maximum block sizes accordingly
+   # e.g., districts.player: 1:10000  <-- sets the global limit on claims
+   # and balance blocks to 10000
+   maxblocklimit: false
+
+   # How often to check leases in hours. If this is 0, then leases will be checked
+   # once when the plugin is loaded. If your server is automatically reset every day
+   # this may be sufficient. The smaller this number, the quicker a lease will expire
+   # after the deadline. 12 hours should be sufficient.
+   checkleases: 12
+
+   #Debug level
+   #Setting to 0 will result in Districts being very quiet, except for errors
+   #1 = normal
+   #2 or higher show debug messages in the console and will get very noisy
+   debug: 1
+
+   ### Global settings for districts
+   ### Players cannot customize these settings
+   # Allow lava or water flow into or out of a district
+   allowflowin: false
+   allowflowout: false
+
+
+   ### Default settings for districts. Owners will be able to customize the settings
+   ### using the control panel
+   #[true/false] PVP is allowed or denied.
+   allowPvP: false
+   # Other players can break blocks or not or generally damage things
+   allowbreakblocks: false
+   # Other players can place blocks
+   allowplaceblocks: false
+   # Allow players to be able to sleep in beds not on their island
+   allowbeduse: false
+   # Allow players to use buckets, either fill or dump them
+   allowbucketuse: false
+   # Allow players to shear sheep
+   allowshearing: false
+   # Allow players to throw enderpearls and teleport
+   allowenderpearls: false
+   # Allow players to use doors or trapdoors. If a door is operated by a button or redstone, this does not count
+   allowdooruse: false
+   # Allow players to use levers or buttons
+   allowleverbuttonuse: false
+   # Allow players to trample crops
+   allowcroptrample: false
+   # Allow players to access chests of any kind, droppers, dispensers and hoppers
+   allowchestaccess: false
+   # Allow players to access furnaces
+   allowfurnaceuse: false
+   # Allow players to adjust diodes or comparators
+   allowredstone: false
+   # Allow players to use jukeboxes, eject discs and hit note blocks
+   allowmusic: false
+   # Allow players to use crafting benches
+   allowcrafting: true
+   # Allow players to use cauldrons and brewing stands
+   allowbrewing: false
+   # Allow gates to be used
+   allowgateuse: false
+   # Allow non-monster mobs to be hurt
+   allowhurtmobs: false
+   
