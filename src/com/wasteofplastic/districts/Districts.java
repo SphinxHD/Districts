@@ -924,7 +924,7 @@ public class Districts extends JavaPlugin {
 		wg = WorldGuard.getInstance().getPlatform();
 		RegionContainer container = wg.getRegionContainer();
 	    RegionManager regions = container.get(new BukkitWorld(pos1.getWorld()));
-	    Location one = new Location(pos1.getWorld(), pos1.getBlockX(), 0, pos1.getBlockZ());
+	    Location one = new Location(pos1.getWorld(), pos1.getBlockX(), pos1.getWorld().getMinHeight(), pos1.getBlockZ());
 	    Location two = new Location(pos1.getWorld(), pos2.getBlockX(), pos2.getWorld().getMaxHeight(), pos2.getBlockZ());
 	    BlockVector3 min;
 	    BlockVector3 max;
